@@ -3,826 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subharthee Dey - Technical Writer Resume</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --light-text: #7f8c8d;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f5f7fa;
-            padding: 20px;
-            transition: var(--transition);
-        }
-        
-        body.dark-mode {
-            background-color: #121212;
-            color: #f5f5f5;
-        }
-        
-        .resume-container {
-            max-width: 1000px;
-            margin: 20px auto;
-            background: white;
-            box-shadow: var(--shadow);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .dark-mode .resume-container {
-            background: #1e1e1e;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        
-        .header {
-            display: flex;
-            justify-content: space-between;
-            padding: 30px;
-            background-color: var(--primary-color);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-            pointer-events: none;
-        }
-        
-        .name-title h1 {
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-            animation: fadeInDown 0.8s ease;
-        }
-        
-        .name-title h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--light-color);
-            animation: fadeInDown 0.8s ease 0.2s both;
-        }
-        
-        .contact-info {
-            text-align: right;
-            animation: fadeIn 1s ease 0.4s both;
-        }
-        
-        .contact-info p {
-            margin-bottom: 5px;
-        }
-        
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .contact-info a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
-        
-        .main-content {
-            display: flex;
-            transition: var(--transition);
-        }
-        
-        .left-column {
-            flex: 2;
-            padding: 30px;
-        }
-        
-        .dark-mode .left-column {
-            background: #1e1e1e;
-        }
-        
-        .right-column {
-            flex: 1;
-            padding: 30px;
-            background-color: var(--light-color);
-            transition: var(--transition);
-        }
-        
-        .dark-mode .right-column {
-            background: #2d2d2d;
-        }
-        
-        .section {
-            margin-bottom: 30px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        .section-title {
-            color: var(--secondary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .dark-mode .section-title {
-            color: #4dabf7;
-            border-bottom-color: #4dabf7;
-        }
-        
-        .profile p {
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-        
-        .dark-mode .profile p {
-            color: #e0e0e0;
-        }
-        
-        .job {
-            margin-bottom: 25px;
-            background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 8px;
-            transition: var(--transition);
-        }
-        
-        .dark-mode .job {
-            background: rgba(255,255,255,0.05);
-        }
-        
-        .job:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        }
-        
-        .job-title {
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-            color: var(--primary-color);
-        }
-        
-        .dark-mode .job-title {
-            color: #bb86fc;
-        }
-        
-        .job-company {
-            font-weight: bold;
-            color: var(--dark-color);
-        }
-        
-        .dark-mode .job-company {
-            color: #e0e0e0;
-        }
-        
-        .job-duration {
-            color: var(--light-text);
-            font-style: italic;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-        }
-        
-        .job-description {
-            margin-left: 15px;
-        }
-        
-        .job-description ul {
-            list-style-position: outside;
-            margin-left: 20px;
-        }
-        
-        .job-description li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 15px;
-        }
-        
-        .job-description li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-        }
-        
-        .dark-mode .job-description li::before {
-            color: #4dabf7;
-        }
-        
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .skill-category {
-            flex: 1;
-            min-width: 150px;
-        }
-        
-        .skill-category h3 {
-            margin-bottom: 10px;
-            color: var(--dark-color);
-            font-size: 1rem;
-        }
-        
-        .dark-mode .skill-category h3 {
-            color: #e0e0e0;
-        }
-        
-        .skill-item {
-            background-color: white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            margin-bottom: 8px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            cursor: default;
-            font-size: 0.9rem;
-        }
-        
-        .skill-item:hover {
-            transform: translateX(5px);
-            background-color: var(--secondary-color);
-            color: white;
-        }
-        
-        .dark-mode .skill-item {
-            background-color: #333;
-            color: #e0e0e0;
-        }
-        
-        .dark-mode .skill-item:hover {
-            background-color: #4dabf7;
-        }
-        
-        .education-item {
-            margin-bottom: 15px;
-        }
-        
-        .education-item h3 {
-            margin-bottom: 5px;
-            font-size: 1rem;
-        }
-        
-        .education-item p {
-            font-size: 0.9rem;
-            color: var(--light-text);
-        }
-        
-        .sample-docs a {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: var(--transition);
-            padding: 8px 15px;
-            background: rgba(52, 152, 219, 0.1);
-            border-radius: 4px;
-        }
-        
-        .sample-docs a:hover {
-            background: rgba(52, 152, 219, 0.2);
-            text-decoration: none;
-        }
-        
-        .dark-mode .sample-docs a {
-            color: #4dabf7;
-            background: rgba(77, 171, 247, 0.1);
-        }
-        
-        .dark-mode .sample-docs a:hover {
-            background: rgba(77, 171, 247, 0.2);
-        }
-        
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow);
-            z-index: 100;
-            transition: var(--transition);
-        }
-        
-        .theme-toggle:hover {
-            transform: scale(1.1);
-        }
-        
-        .dark-mode .theme-toggle {
-            background: #bb86fc;
-            color: #121212;
-        }
-        
-        .progress-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: transparent;
-            z-index: 100;
-        }
-        
-        .progress-bar {
-            height: 4px;
-            background: var(--secondary-color);
-            width: 0%;
-            transition: width 0.1s ease;
-        }
-        
-        .dark-mode .progress-bar {
-            background: #bb86fc;
-        }
-        
-        .print-btn {
-            position: fixed;
-            top: 70px;
-            right: 20px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow);
-            z-index: 100;
-            transition: var(--transition);
-        }
-        
-        .print-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        .dark-mode .print-btn {
-            background: #bb86fc;
-            color: #121212;
-        }
-        
-        .tooltip {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 120px;
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 0.8rem;
-        }
-        
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .main-content {
-                flex-direction: column;
-            }
-            
-            .header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-            
-            .contact-info {
-                text-align: center;
-                margin-top: 15px;
-            }
-            
-            .skills-container {
-                flex-direction: column;
-            }
-            
-            .left-column, .right-column {
-                padding: 20px;
-            }
-            
-            .section {
-                margin-bottom: 20px;
-            }
-            
-            .theme-toggle {
-                top: 10px;
-                right: 10px;
-            }
-            
-            .print-btn {
-                top: 60px;
-                right: 10px;
-            }
-        }
-        
-        @media print {
-            body {
-                background: white;
-                color: black;
-                padding: 0;
-            }
-            
-            .resume-container {
-                box-shadow: none;
-                margin: 0;
-                border-radius: 0;
-            }
-            
-            .theme-toggle, .print-btn, .progress-container {
-                display: none;
-            }
-            
-            .header {
-                background: #2c3e50 !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            .right-column {
-                background: #ecf0f1 !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            a {
-                text-decoration: none;
-                color: #2c3e50;
-            }
-        }
-    </style>
+    <title>Subharthee Dey - Technical Writer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
-    
-    <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-    </button>
-    
-    <button class="print-btn" id="printBtn">
-        <i class="fas fa-print"></i>
-    </button>
-    
-    <div class="resume-container" id="resumeContainer">
-        <div class="header">
-            <div class="name-title">
-                <h1>Subharthee Dey</h1>
-                <h2>Technical Writer | Information Developer | Content Design | API Documentation</h2>
-            </div>
-            <div class="contact-info">
-                <p>Bengaluru, India</p>
-                <p>8885745870</p>
-                <p><a href="mailto:subhartheed@gmail.com">subhartheed@gmail.com</a></p>
-            </div>
-        </div>
-        
-        <div class="main-content">
-            <div class="left-column">
-                <section class="section profile" style="animation-delay: 0.1s">
-                    <h2 class="section-title">Profile</h2>
-                    <p>A versatile technical professional with 9 years of relevant experience in software product documentation and proven track record of translating complex information into clear and concise documentation for diverse stakeholder audiences.</p>
-                </section>
-                
-                <section class="section job-roles" style="animation-delay: 0.2s">
-                    <h2 class="section-title">Job Roles and Responsibilities</h2>
-                    
-                    <h3>Technical Documentation & Content Development</h3>
-                    <ul>
-                        <li>Designed and developed user/admin guides, FAQs, release notes, newsletters, and video tutorials for B2B SaaS, banking, and fintech products using ClickHelp, FrameMaker, MadCap Flare, RoboHelp, Camtasia, Confluence, Word, and SnagIt.</li>
-                        <li>Created prototype of app features using Figma</li>
-                        <li>Created video tutorials using Techsmith Camtasia and SnagIT for end-users</li>
-                        <li>Documented web APIs, including REST APIs, using Postman and detailed the OAuth 2.0 authentication process</li>
-                        <li>Comprehensive knowledge of APIs, including methods, headers, response codes, and data formats (JSON, XML)</li>
-                        <li>Familiarity with API authentication and authorization methods (e.g., OAuth and API keys)</li>
-                        <li>Sent and analysed API requests and responses in JSON format using Postman</li>
-                        <li>Documented web APIs in Markdown using the doc-as-code approach in VS Code, and pushed the changes to GitHub</li>
-                        <li>Migrated content from FrameMaker to GitLab</li>
-                        <li>Adept in UX/UI writing, tooltips, and on-screen messages for enhanced user experience</li>
-                        <li>Analysed source documents such as software requirements, product specifications, technical specifications, and change requests</li>
-                        <li>Simulated test scenarios in sandbox environments to validate end-user content</li>
-                        <li>Knowledge of DITA and hands-on experience in structured authoring tools like Adobe Robohelp and Madcap Flare</li>
-                        <li>Experienced working with topic-based authoring using HTML and XML tags</li>
-                        <li>Experienced in UX writing, content strategy, and information architecture</li>
-                    </ul>
-                    
-                    <h3>Process and Project Management</h3>
-                    <ul>
-                        <li>Conducted "Voice of User" surveys to gather end-user feedback on product documentation</li>
-                        <li>Developed documentation plan and estimate effort</li>
-                        <li>Experienced working in an agile software development team distributed globally</li>
-                        <li>Leveraged data analytics to optimize engagement and readability of end-user documents</li>
-                        <li>Elicited and documented comprehensive business and data flow requirements by engaging with product owners, business stakeholders, and technical teams to ensure alignment and feasibility</li>
-                        <li>Presented strategic and executional work at all levels of leadership, soliciting and acting on feedback received</li>
-                        <li>Led a team of technical writers, provide mentorship, guidance, and feedback to maintain high-quality standards</li>
-                        <li>Developed and implemented documentation standards, style guides, and best practices for consistency and efficiency</li>
-                        <li>Managed documentation projects from inception to completion, ensuring timely delivery and alignment with product release schedules</li>
-                    </ul>
-                    
-                    <h3>UAT / Quality Assurance/BA</h3>
-                    <ul>
-                        <li>Perform functional UAT for CRE Lending applications (SMART, Pierpont, CLOSER)</li>
-                        <li>Experienced writing Functional Requirements Specification (FRS) including Use Cases, Business Rules, and Wireframes</li>
-                        <li>Developed automation test scripts using SmartSpec framework and IntelliJ IDEA</li>
-                        <li>Prepared test cases/scenarios and updated JIRA tickets</li>
-                        <li>Outlined the scope and acceptance criteria for each user story</li>
-                        <li>Performed Functional UAT, Regression, and Performance testing</li>
-                        <li>Performed testing of API endpoints using Postman</li>
-                        <li>Act as SPOC for production issue resolution through ServiceNow</li>
-                    </ul>
-                    
-                    <h3>Technical Experience</h3>
-                    <ul>
-                        <li>Good experience and knowledge on Python and SQL</li>
-                        <li>Created AI (LLM) prompts and leveraged it to draft end-user content</li>
-                        <li>Proficient in Confluence, JIRA, Salesforce, and GitHub</li>
-                        <li>Familiarity with markup languages such as Markdown and HTML</li>
-                        <li>Experienced in Copado DevOps</li>
-                    </ul>
-                </section>
-                
-                <section class="section employment" style="animation-delay: 0.3s">
-                    <h2 class="section-title">Employment History</h2>
-                    
-                    <div class="job">
-                        <div class="job-title">Senior Associate - Product Portfolio (Technical Writer)</div>
-                        <div class="job-company">JP Morgan and Chase, Bengaluru</div>
-                        <div class="job-duration">June 2023 -- Present</div>
-                        <div class="tooltip">
-                            <span class="tooltiptext">Current Position</span>
-                        </div>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-title">Lead Technical Writer</div>
-                        <div class="job-company">Copado India Pvt Ltd, Bengaluru</div>
-                        <div class="job-duration">February 2022 - June 2023</div>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-title">Principal Technical Writer (Individual Contributor)</div>
-                        <div class="job-company">Ekinops India Pvt Ltd, Bengaluru</div>
-                        <div class="job-duration">September 2020 - February 2022</div>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-title">Technical Writing Consultant</div>
-                        <div class="job-company">Deloitte (USI), Bengaluru</div>
-                        <div class="job-duration">October 2018 - September 2020</div>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-title">Senior Technical Writer</div>
-                        <div class="job-company">Accenture, Bengaluru</div>
-                        <div class="job-duration">April 2017 - October 2018</div>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-title">Technical Writer</div>
-                        <div class="job-company">Netcracker Technology Solutions Pvt Ltd, Hyderabad</div>
-                        <div class="job-duration">August 2016 - April 2017</div>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-title">Reliability Analyst</div>
-                        <div class="job-company">Cyient Ltd, Hyderabad</div>
-                        <div class="job-duration">July 2011 - July 2016</div>
-                    </div>
-                </section>
-            </div>
-            
-            <div class="right-column">
-                <section class="section sample-docs" style="animation-delay: 0.4s">
-                    <h2 class="section-title">Sample Documents</h2>
-                    <a href="https://drive.google.com/drive/folders/1kD_SrGLguDVVfXT3OkfD3JycgwuDm5N5?usp=drive_link" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> My Sample Documents
-                    </a>
-                </section>
-                
-                <section class="section skills" style="animation-delay: 0.5s">
-                    <h2 class="section-title">Skills</h2>
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h3>Technical Writing</h3>
-                            <div class="skill-item">Confluence</div>
-                            <div class="skill-item">Document Management</div>
-                            <div class="skill-item">Snagit</div>
-                            <div class="skill-item">Release Notes</div>
-                            <div class="skill-item">Help Guide</div>
-                            <div class="skill-item">User Guide</div>
-                            <div class="skill-item">Job Aids</div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>Tools</h3>
-                            <div class="skill-item">Adobe Framemaker</div>
-                            <div class="skill-item">Adobe Robohelp</div>
-                            <div class="skill-item">MS Office</div>
-                            <div class="skill-item">Madcap Flare</div>
-                            <div class="skill-item">Salesforce</div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>Technical</h3>
-                            <div class="skill-item">HTML & CSS</div>
-                            <div class="skill-item">LINUX Commands</div>
-                            <div class="skill-item">Python</div>
-                            <div class="skill-item">Git</div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>Project</h3>
-                            <div class="skill-item">Project Management</div>
-                            <div class="skill-item">Project Planning</div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section class="section training" style="animation-delay: 0.6s">
-                    <h2 class="section-title">Training & Support</h2>
-                    <ul>
-                        <li>Mentor peers</li>
-                        <li>Production Support</li>
-                        <li>Conduct cross-functional training sessions</li>
-                    </ul>
-                </section>
-                
-                <section class="section education" style="animation-delay: 0.7s">
-                    <h2 class="section-title">Education</h2>
-                    <div class="education-item">
-                        <h3>BSc in IT</h3>
-                        <p>Sikkim Manipal University</p>
-                    </div>
-                    <div class="education-item">
-                        <h3>AME Diploma</h3>
-                        <p>IIAS</p>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        // Dark mode toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        const resumeContainer = document.getElementById('resumeContainer');
-        
-        // Check for saved theme preference
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-            body.classList.add(currentTheme);
-            updateThemeIcon();
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const theme = body.classList.contains('dark-mode') ? 'dark-mode' : '';
-            localStorage.setItem('theme', theme);
-            updateThemeIcon();
-        });
-        
-        function updateThemeIcon() {
-            const icon = themeToggle.querySelector('i');
-            if (body.classList.contains('dark-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        }
-        
-        // Print functionality
-        const printBtn = document.getElementById('printBtn');
-        printBtn.addEventListener('click', () => {
-            window.print();
-        });
-        
-        // Scroll progress bar
-        const progressBar = document.getElementById('progressBar');
-        window.addEventListener('scroll', () => {
-            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollProgress = (scrollTop / scrollHeight) * 100;
-            progressBar.style.width = scrollProgress + '%';
-        });
-        
-        // Animate sections when they come into view
-        const sections = document.querySelectorAll('.section');
-        
-        const observerOptions = {
-            threshold: 0.1
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-        
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Initialize animations with delays
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add slight delay to allow CSS to load before animations start
-            setTimeout(() => {
-                body.style.visibility = 'visible';
-            }, 100);
-        });
-    </script>
+    <header>
+        <div class="container">
+            <h1>Subharthee Dey</h1>
+            <p>Technical Writer | Information Developer | Content Design | API Documentation</p>
+        </div>
+    </header>
+
+    <section id="profile" class="container">
+        <h2>Profile</h2>
+        <p>A versatile technical professional with 9 years of relevant experience in software product documentation and proven track record of translating complex information into clear and concise documentation for diverse stakeholder audiences.</p>
+    </section>
+
+    <section id="job-roles" class="container">
+        <h2>Job Roles and Responsibilities</h2>
+        <div class="job-section">
+            <h3>Technical Documentation & Content Development</h3>
+            <ul>
+                <li>Designed and developed user/admin guides, FAQs, release notes, newsletters, and video tutorials for B2B SaaS, banking, and fintech products using ClickHelp, FrameMaker, MadCap Flare, RoboHelp, Camtasia, Confluence, Word, and SnagIt.</li>
+                <li>Created prototype of app features using Figma</li>
+                 <li>Created video tutorials using Techsmith Camtasia and SnagIT for end-users</li>
+                <li>Documented web APIs, including REST APIs, using Postman and detailed the OAuth 2.0 authentication process</li>
+                <li>Comprehensive knowledge of APIs, including methods, headers, response codes, and data formats (JSON, XML).</li>
+                <li>Familiarity with API authentication and authorization methods (e.g., OAuth and API keys)</li>
+                <li>Sent and analysed API requests and responses in JSON format using Postman</li>
+                <li>Documented web APIs in Markdown using the doc-as-code approach in VS Code, and pushed the changes to GitHub</li>
+                <li>Migrated content from FrameMaker to GitLab</li>
+                <li>Adept in UX/UI writing, tooltips, and on-screen messages for enhanced user experience</li>
+                <li>Analysed source documents such as software requirements, product specifications, technical specifications, and change requests.</li>
+                <li>Simulated test scenarios in sandbox environments to validate end-user content.</li>
+                <li>Knowledge of DITA and hands-on experience in structured authoring tools like Adobe Robohelp and Madcap Flare.</li>
+                <li>Experienced working with topic-based authoring using HTML and XML tags</li>
+                <li>Experienced in UX writing, content strategy, and information architecture</li>
+            </ul>
+        </div>
+        <div class="job-section">
+            <h3>Process and Project Management</h3>
+            <ul>
+                <li>Conducted "Voice of User" surveys to gather end-user feedback on product documentation</li>
+                <li>Developed documentation plan and estimate effort</li>
+                <li>Experienced working in an agile software development team distributed globally</li>
+                <li>Leveraged data analytics to optimize engagement and readability of end-user documents</li>
+                <li>Elicited and documented comprehensive business and data flow requirements by engaging with product owners, business stakeholders, and technical teams to ensure alignment and feasibility</li>
+                <li>Presented strategic and executional work at all levels of leadership, soliciting and acting on feedback received .</li>
+                <li>Led a team of technical writers, provide mentorship, guidance, and feedback to maintain high-quality standards</li>
+                <li>Developed and implemented documentation standards, style guides, and best practices for consistency and efficiency</li>
+                <li>Managed documentation projects from inception to completion, ensuring timely delivery and alignment with product release schedules</li>
+            </ul>
+        </div>
+          <div class="job-section">
+            <h3>UAT / Quality Assurance/BA</h3>
+            <ul>
+                <li>Perform  functional UAT  for CRE Lending applications ( SMART, Pierpont, CLOSER ).</li>
+                <li>Experienced writing Functional Requirements Specification (FRS) including Use Cases, Business Rules, and Wireframes</li>
+                <li>Developed automation test scripts using SmartSpec framework and IntelliJ IDEA</li>
+                <li>Prepared test cases/scenarios and updated JIRA tickets</li>
+                <li>Outlined the scope and acceptance criteria for each user story</li>
+                <li>Performed Functional UAT, Regression, and Performance testing</li>
+                 <li>Performed testing of API endpoints using Postman</li>
+                <li>Act as SPOC for production issue resolution through ServiceNow</li>
+            </ul>
+        </div>
+         <div class="job-section">
+            <h3>Technical Experience</h3>
+            <ul>
+                <li>Good experience and knowledge on Python and SQL</li>
+                <li>Created AI (LLM) prompts and leveraged it to draft end-user content</li>
+                <li>Proficient in Confluence, JIRA, Salesforce, and GitHub</li>
+                <li>Familiarity with markup languages such as Markdown and HTML</li>
+                <li>Experienced in Copado DevOps</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section id="employment" class="container">
+        <h2>Employment History</h2>
+        <div class="employment-entry">
+            <h4>Senior Associate - Product Portfolio (Technical Writer) at JP Morgan and Chase, Bengaluru (June 2023 – Present)</h4>
+        </div>
+        <div class="employment-entry">
+            <h4>Lead Technical Writer at Copado India Pvt Ltd, Bengaluru (February 2022 — June 2023)</h4>
+        </div>
+         <div class="employment-entry">
+            <h4>Principal Technical Writer (Individual Contributor) at Ekinops India Pvt Ltd, Bengaluru (September 2020 — February 2022)</h4>
+        </div>
+        <div class="employment-entry">
+            <h4>Technical Writing Consultant at Deloitte (USI), Bengaluru (October 2018 — September 2020)</h4>
+        </div>
+        <div class="employment-entry">
+             <h4>Senior Technical Writer at Accenture, Bengaluru (April 2017 — October 2018)</h4>
+        </div>
+        <div class="employment-entry">
+            <h4>Technical Writer at Netcracker Technology Solutions Pvt Ltd, Hyderabad (August 2016 — April 2017)</h4>
+
+        </div>
+         <div class="employment-entry">
+             <h4>Reliability Analyst at Cyient Ltd, Hyderabad (July 2011 — July 2016)</h4>
+        </div>
+    </section>
+
+    <section id="details" class="container">
+        <h2>Details</h2>
+        <p>Bengaluru, India</p>
+        <p>8885745870</p>
+        <p><a href="mailto:subhartheed@gmail.com">subhartheed@gmail.com</a></p>
+         <p><a href="#">My Sample Documents</a></p>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <span class="skill">Technical Writing</span>
+            <span class="skill">Confluence</span>
+            <span class="skill">Document Management</span>
+            <span class="skill">Snagit</span>
+            <span class="skill">Release Notes</span>
+            <span class="skill">Help Guide</span>
+            <span class="skill">User Guide</span>
+            <span class="skill">Job Aids</span>
+            <span class="skill">Adobe Framemaker</span>
+            <span class="skill">Adobe Robohelp</span>
+            <span class="skill">MS Office</span>
+            <span class="skill">Project Management</span>
+            <span class="skill">Madcap Flare</span>
+            <span class="skill">Salesforce</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">Project Planning</span>
+            <span class="skill">LINUX Commands</span>
+            <span class="skill">Python</span>
+            <span class="skill">Git</span>
+            <span class="skill">Training & Support</span>
+            <span class="skill">Mentor peers</span>
+            <span class="skill">Production Support</span>
+            <span class="skill">Conduct cross-functional training sessions</span>
+        </div>
+    </section>
+
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <p>BSc in IT from Sikkim Manipal University</p>
+        <p>AME Diploma from IIAS</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Subharthee Dey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
