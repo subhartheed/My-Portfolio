@@ -1,88 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Subharthee Dey - Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Subharthee_Dey_Resume.docx" download><i class="fa-solid fa-download"></i> Resume</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Subharthee Dey</h1>
     <p>Technical Writer | Information Developer | API Documentation</p>
-    <p><strong>Location:</strong> Bengaluru, India | <strong>Email:</strong> subhartheed@gmail.com | <strong>Phone:</strong> 8885745870</p>
   </header>
 
-  <section>
+  <section id="profile" class="fade-in">
     <h2>Profile</h2>
-    <p>A versatile technical professional with 9 years of experience in software product documentation and a proven track record of translating complex information into clear and concise documentation.</p>
+    <p>Versatile technical professional with 9 years of experience in software documentation, API writing, and user-focused content strategy.</p>
   </section>
 
-  <section>
-    <h2>Job Roles and Responsibilities</h2>
+  <section id="experience" class="fade-in">
+    <h2>Experience</h2>
     <ul>
-      <li>Designed user/admin guides, FAQs, release notes, and video tutorials for B2B SaaS, banking, and fintech products.</li>
-      <li>Created prototypes in Figma and tutorials with Camtasia/Snagit.</li>
-      <li>Documented REST APIs with Postman; explained OAuth 2.0, JSON, XML, and headers.</li>
-      <li>Wrote Markdown-based API docs in VS Code using doc-as-code and GitHub.</li>
-      <li>Experienced in UX/UI writing, tooltips, and user messages.</li>
-      <li>Worked with structured authoring tools (DITA, RoboHelp, Flare).</li>
+      <li><strong>JP Morgan & Chase</strong> – Senior Associate (2023–Present)</li>
+      <li><strong>Copado India</strong> – Lead Technical Writer (2022–2023)</li>
+      <li><strong>Ekinops India</strong> – Principal Technical Writer (2020–2022)</li>
+      <li><strong>Deloitte USI</strong> – Consultant (2018–2020)</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Process and Project Management</h2>
-    <ul>
-      <li>Led teams, mentored writers, and developed documentation standards.</li>
-      <li>Gathered requirements, managed agile workflows, and used analytics to improve content.</li>
-      <li>Used tools like Confluence, JIRA, GitHub.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>UAT / QA / Business Analysis</h2>
-    <ul>
-      <li>Performed functional UAT for banking apps.</li>
-      <li>Wrote functional requirement specs and test cases.</li>
-      <li>Tested APIs, documented acceptance criteria, and tracked issues in JIRA.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Technical Experience</h2>
-    <ul>
-      <li>Python, SQL, HTML, CSS, Markdown</li>
-      <li>Salesforce, Copado DevOps, Git, Confluence</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Employment History</h2>
-    <ul>
-      <li><strong>Senior Associate</strong> – JP Morgan & Chase (June 2023 – Present)</li>
-      <li><strong>Lead Technical Writer</strong> – Copado India (Feb 2022 – June 2023)</li>
-      <li><strong>Principal Technical Writer</strong> – Ekinops India (Sep 2020 – Feb 2022)</li>
-      <li><strong>Technical Writing Consultant</strong> – Deloitte USI (Oct 2018 – Sep 2020)</li>
-      <li><strong>Senior Technical Writer</strong> – Accenture (Apr 2017 – Oct 2018)</li>
-      <li><strong>Technical Writer</strong> – Netcracker (Aug 2016 – Apr 2017)</li>
-      <li><strong>Reliability Analyst</strong> – Cyient Ltd (Jul 2011 – Jul 2016)</li>
-    </ul>
-  </section>
-
-  <section>
+  <section id="skills" class="fade-in">
     <h2>Skills</h2>
-    <p>Technical Writing, Confluence, Document Management, Snagit, Release Notes, Help Guide, User Guide, Adobe FrameMaker, RoboHelp, MS Office, MadCap Flare, Salesforce, HTML, CSS, Python, Git, Project Management, Linux, Training & Support</p>
+    <p>Technical Writing, API Docs, Markdown, Confluence, Git, Python, HTML/CSS, Camtasia, FrameMaker, RoboHelp</p>
   </section>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>BSc in IT – Sikkim Manipal University</li>
-      <li>AME Diploma – IIAS</li>
-    </ul>
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p><i class="fa-solid fa-location-dot"></i> Bengaluru, India</p>
+    <p><i class="fa-solid fa-envelope"></i> subhartheed@gmail.com</p>
+    <p><i class="fa-solid fa-phone"></i> +91 88857 45870</p>
+    <div class="socials">
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  
   </section>
 
-  <footer>
+  <section id="projects" class="scroll-fade">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Documentation Hub</h3>
+      <p>Created a centralized documentation hub using Markdown and GitHub Pages for internal APIs and user guides.</p>
+      <a href="#">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Interactive Help Center</h3>
+      <p>Designed an interactive help center with tooltips, onboarding messages, and search features using HTML/CSS/JS.</p>
+      <a href="#">View Demo</a>
+    </div>
+  </section>
+  <script src="script.js"></script>
+
     <p>© Subharthee Dey</p>
   </footer>
 </body>
